@@ -35,7 +35,7 @@ namespace Project2_1_DailyBlogger
 
 
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
-            services.AddDbContext<BlogContext>(options => 
+            services.AddDbContext<BlogContext>(options =>
                options.UseSqlServer(Configuration.GetConnectionString("Blog")));
         }
 
@@ -63,10 +63,5 @@ namespace Project2_1_DailyBlogger
                     template: "{controller=Home}/{action=Index}/{id?}");
             });
         }
-    }
-
-    internal class BlogContext
-    {
-        internal object blogPost;
     }
 }
